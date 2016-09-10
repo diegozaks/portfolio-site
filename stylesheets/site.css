@@ -3,6 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import "https://fonts.googleapis.com/css?family=Merriweather:300,300i|Open+Sans:300,400,600";
 /* line 8, _normalize.scss */
 html {
   font-family: sans-serif;
@@ -404,61 +405,449 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/* line 4, site.css.scss */
+/* line 32, site.css.scss */
 body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #9B9B9B;
+  font-size: 19px;
+  background-color: #F9F9F9; }
+  /* line 39, site.css.scss */
+  body .bold {
+    font-weight: 600; }
 
-/* line 11, site.css.scss */
-.logo img {
-  height: 18.75em;
-  margin-top: 6em; }
-
-/* line 16, site.css.scss */
-h1 {
-  color: rgba(0, 0, 0, 0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0; }
-
-/* line 24, site.css.scss */
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
+/* line 44, site.css.scss */
+a {
+  color: #5C5C5C;
+  text-decoration: none;
   font-weight: 300; }
-  /* line 30, site.css.scss */
-  .doc a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear; }
-    /* line 37, site.css.scss */
-    .doc a:hover {
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-      transition: all 0.15s linear; }
 
-/* line 45, site.css.scss */
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+/* line 49, site.css.scss */
+a:hover {
+  text-decoration: underline;
+  font-weight: 600; }
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0; }
+/* line 55, site.css.scss */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #F9F9F9; }
+
+/* line 61, site.css.scss */
+h2 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  color: #9B9B9B;
+  font-style: italic; }
+
+/* line 68, site.css.scss */
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: #9B9B9B;
+  line-height: 1.6em;
+  padding-right: 10px; }
+  /* line 76, site.css.scss */
+  h3 a {
+    font-weight: 400; }
+
+/* line 82, site.css.scss */
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 20px 0 20px; }
+  @media (min-width: 768px) {
+    /* line 82, site.css.scss */
+    header {
+      position: fixed;
+      width: 100%;
+      max-width: 1280px;
+      z-index: 99; } }
+  /* line 95, site.css.scss */
+  header h1 {
+    width: 100%;
+    font-family: "Merriweather", serif;
+    font-size: 19px;
+    letter-spacing: 0.45px;
+    line-height: 45px; }
+    /* line 102, site.css.scss */
+    header h1 a {
+      color: #4BD68E;
+      animation: headerColor 10s infinite alternate; }
+    @media (min-width: 768px) {
+      /* line 95, site.css.scss */
+      header h1 {
+        width: 30%; } }
+  /* line 113, site.css.scss */
+  header nav ul {
+    list-style-type: none;
+    padding: 0 20px 0 0;
+    display: flex;
+    align-items: center; }
+    /* line 118, site.css.scss */
+    header nav ul li {
+      display: inline;
+      padding: 0 10px 0 0; }
+      @media (min-width: 768px) {
+        /* line 118, site.css.scss */
+        header nav ul li {
+          padding: 0 15px; } }
+      /* line 126, site.css.scss */
+      header nav ul li a {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #9B9B9B;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        text-decoration: none; }
+      /* line 134, site.css.scss */
+      header nav ul li a:hover {
+        text-decoration: underline; }
+      /* line 141, site.css.scss */
+      header nav ul li .twitterNavLink img {
+        width: 18px;
+        margin-bottom: -2px; }
+
+@keyframes headerColor {
+  /*hue will animate from 0 to 360. Saturation and Lightness remain constant*/
+  25% {
+    color: #4BD68E; }
   50% {
-    -webkit-transform: scale(0);
-    opacity: 0; }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1; }
-  to {
-    -webkit-transform: scale(1); } }
+    color: #5FA7C3; }
+  75% {
+    color: #FB7872; }
+  100% {
+    color: #FED245; } }
+/* line 162, site.css.scss */
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #ffffff;
+  padding: 0 10px 40px 20px;
+  align-items: center;
+  background-color: #5FA7C3;
+  /*red*/ }
+  /* line 175, site.css.scss */
+  footer .copyright {
+    font-size: 14px; }
+  /* line 179, site.css.scss */
+  footer ul {
+    list-style-type: none;
+    padding: 0; }
+    /* line 182, site.css.scss */
+    footer ul li {
+      display: inline;
+      padding: 0 10px 0 0; }
+      @media (min-width: 768px) {
+        /* line 182, site.css.scss */
+        footer ul li {
+          padding: 0 15px; } }
+      /* line 190, site.css.scss */
+      footer ul li a {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff; }
+      /* line 198, site.css.scss */
+      footer ul li a:hover {
+        text-decoration: underline; }
+      /* line 205, site.css.scss */
+      footer ul li .twitterNavLink img {
+        width: 18px;
+        margin-bottom: -3px; }
+  @media (min-width: 768px) {
+    /* line 162, site.css.scss */
+    footer {
+      padding: 0 20px 100px 20px; } }
+
+/* line 219, site.css.scss */
+.nyc {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0; }
+  /* line 225, site.css.scss */
+  .nyc img {
+    max-width: 12px;
+    margin-left: 10px; }
+
+/* line 238, site.css.scss */
+.index h1 {
+  font-size: 32px; }
+/* line 241, site.css.scss */
+.index .subtitle {
+  padding: 80px 10px 10px 20px; }
+  @media (min-width: 768px) {
+    /* line 241, site.css.scss */
+    .index .subtitle {
+      padding: 240px 0 10px 20px; } }
+
+@media (min-width: 768px) {
+  /* line 254, site.css.scss */
+  .projectGroup {
+    display: flex;
+    align-items: stretch; } }
+/* line 261, site.css.scss */
+.projectGroup .column {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  /* line 266, site.css.scss */
+  .projectGroup .column .project {
+    position: relative; }
+    /* line 270, site.css.scss */
+    .projectGroup .column .project .thumb {
+      opacity: 1;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out; }
+      /* line 275, site.css.scss */
+      .projectGroup .column .project .thumb img {
+        width: 100%;
+        display: block; }
+    /* line 281, site.css.scss */
+    .projectGroup .column .project .name {
+      position: absolute;
+      left: 40px;
+      top: 20px;
+      padding-right: 40px;
+      font-size: 19px;
+      font-weight: 300;
+      color: #5C5C5C;
+      opacity: 0;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out; }
+      /* line 295, site.css.scss */
+      .projectGroup .column .project .name h3 {
+        font-family: "Merriweather", serif;
+        font-size: 19px;
+        color: #5C5C5C; }
+  /* line 304, site.css.scss */
+  .projectGroup .column .project:hover .name {
+    opacity: 1;
+    transition: opacity .45s ease-in-out;
+    -moz-transition: opacity .45s ease-in-out;
+    -webkit-transition: opacity .45s ease-in-out; }
+  /* line 310, site.css.scss */
+  .projectGroup .column .project:hover .thumb {
+    opacity: 0.2;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; }
+
+/* line 320, site.css.scss */
+.metaDescription {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #5C5C5C;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+  font-weight: 600; }
+
+/* line 330, site.css.scss */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0; }
+  /* line 335, site.css.scss */
+  #about p {
+    width: 100%;
+    text-align: center; }
+  /* line 339, site.css.scss */
+  #about .wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    /* line 345, site.css.scss */
+    #about .wrapper .column {
+      width: 100%;
+      text-align: center;
+      position: relative; }
+      @media (min-width: 768px) {
+        /* line 345, site.css.scss */
+        #about .wrapper .column {
+          width: 33%;
+          min-width: 200px; } }
+      /* line 357, site.css.scss */
+      #about .wrapper .column img {
+        max-width: 200px; }
+      /* line 361, site.css.scss */
+      #about .wrapper .column h3 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        color: #9B9B9B;
+        font-size: 19px;
+        margin-top: 0; }
+      /* line 368, site.css.scss */
+      #about .wrapper .column ul {
+        list-style-type: none;
+        font-size: 14px;
+        padding: 0;
+        margin: 0; }
+        /* line 373, site.css.scss */
+        #about .wrapper .column ul li {
+          line-height: 23.8px; }
+  /* line 379, site.css.scss */
+  #about a {
+    display: block;
+    border: 1px solid #9B9B9B;
+    transition: border .25s ease-in-out;
+    -moz-transition: border .25s ease-in-out;
+    -webkit-transition: border .25s ease-in-out;
+    padding: 15px 80px;
+    margin: 70px auto 40px auto;
+    color: #5C5C5C;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #F9F9F9;
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out; }
+  /* line 398, site.css.scss */
+  #about a:hover {
+    font-weight: 600;
+    background-color: #5FA7C3;
+    /*red*/
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    border: 1px solid #5FA7C3;
+    transition: border .25s ease-in-out;
+    -moz-transition: border .25s ease-in-out;
+    -webkit-transition: border .25s ease-in-out;
+    color: #ffffff; }
+  @media (min-width: 768px) {
+    /* line 330, site.css.scss */
+    #about {
+      padding: 60px 0; } }
+
+/* line 419, site.css.scss */
+.human {
+  text-align: center;
+  padding: 120px 0 140px 0; }
+  /* line 422, site.css.scss */
+  .human p {
+    font-size: 32px;
+    margin-bottom: 15px; }
+    /* line 426, site.css.scss */
+    .human p .highlight {
+      font-family: "Merriweather", serif;
+      font-size: 32px;
+      color: #5C5C5C; }
+  /* line 433, site.css.scss */
+  .human a {
+    font-weight: 300;
+    font-size: 14px; }
+
+/* line 446, site.css.scss */
+.contact .contactWrapper {
+  padding: 120px 0 30px 20px;
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: #9B9B9B;
+  line-height: 1.7em;
+  padding-right: 10px; }
+  /* line 456, site.css.scss */
+  .contact .contactWrapper p {
+    max-width: 600px; }
+  /* line 460, site.css.scss */
+  .contact .contactWrapper .contactLinkMain {
+    font-family: "Merriweather", serif;
+    font-size: 32px;
+    color: #5C5C5C;
+    line-height: 45px;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 80px; }
+  /* line 470, site.css.scss */
+  .contact .contactWrapper #social {
+    padding-top: 50px; }
+  /* line 474, site.css.scss */
+  .contact .contactWrapper ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center; }
+    /* line 479, site.css.scss */
+    .contact .contactWrapper ul li {
+      display: inline;
+      margin-right: 30px;
+      margin-top: 10px; }
+
+/* line 499, site.css.scss */
+.projects h3 {
+  max-width: 650px;
+  margin: 80px auto;
+  padding-left: 40px;
+  padding-right: 40px; }
+/* line 506, site.css.scss */
+.projects .projectWrap {
+  background-color: #ffffff;
+  text-align: center; }
+  /* line 511, site.css.scss */
+  .projects .projectWrap #projectHeader {
+    padding-top: 80px;
+    padding-bottom: 40px; }
+    /* line 515, site.css.scss */
+    .projects .projectWrap #projectHeader .smallImageWrapper {
+      margin-top: 20px;
+      margin-bottom: 10px; }
+      /* line 518, site.css.scss */
+      .projects .projectWrap #projectHeader .smallImageWrapper img {
+        width: 100%;
+        max-width: 500px; }
+      /* line 522, site.css.scss */
+      .projects .projectWrap #projectHeader .smallImageWrapper h3 {
+        margin-top: 0px; }
+  /* line 527, site.css.scss */
+  .projects .projectWrap .doubleImageWrapper {
+    display: flex;
+    flex-wrap: wrap; }
+    /* line 531, site.css.scss */
+    .projects .projectWrap .doubleImageWrapper .column {
+      width: 50%; }
+      /* line 534, site.css.scss */
+      .projects .projectWrap .doubleImageWrapper .column img {
+        width: 100%;
+        display: block; }
+  /* line 542, site.css.scss */
+  .projects .projectWrap .imageWrapper img {
+    width: 100%;
+    display: block; }
+  /* line 548, site.css.scss */
+  .projects .projectWrap .reduced img {
+    max-width: 800px;
+    width: 100%; }
+  /* line 553, site.css.scss */
+  .projects .projectWrap .smallImageWrapper {
+    margin-top: 80px; }
+    /* line 555, site.css.scss */
+    .projects .projectWrap .smallImageWrapper img {
+      width: 100%;
+      max-width: 500px; }
+  /* line 562, site.css.scss */
+  .projects .projectWrap .human {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 80px 40px 80px 40px; }
+    /* line 567, site.css.scss */
+    .projects .projectWrap .human h3 {
+      margin: 20px auto; }
+    /* line 570, site.css.scss */
+    .projects .projectWrap .human ul {
+      list-style-type: none;
+      padding: 0; }
+      /* line 573, site.css.scss */
+      .projects .projectWrap .human ul li {
+        padding: 10px 0; }
