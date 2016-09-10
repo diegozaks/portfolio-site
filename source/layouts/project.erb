@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <!-- Welcome -->
+    <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Diego Zaks, Branding & Design" %></title>
 
     <!-- <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> -->
@@ -28,6 +28,19 @@
 
   <body class="<%= page_classes %>">
   <div class="container">
+  <header>
+  <h1><a href="http://diegozaks.com">Diego Zaks</a></h1>
+  <nav>
+    <ul>
+      <!-- <li><a href="">The Work</a></li> -->
+      <!-- <li><a href="">Writing</a></li> -->
+      <li><a href="/index.html" class="contactLink">Work</a></li>
+      <li><a href="/contact.html" class="contactLink">Contact</a></li>
+      <li><a href="https://twitter.com/diegozaks" target="_blank" class="twitterNavLink"><img src="/images/icons/TwitterIcon.png" alt=""></a></li>
+    </ul>
+  </nav>
+</header>
+
     <%= yield %>
 
   <footer>
@@ -36,7 +49,7 @@
     </div>
     <div class="footernav">
       <ul>
-      <li><a href="/index.html" class="contactLink">Work</a></li>
+      <li><a href="/index.html">Work</a></li>
       <!-- <li><a href="">Writing</a></li> -->
       <li><a href="/contact.html" class="contactLink">Contact</a></li>
       <li><a href="https://twitter.com/diegozaks" target="_blank" class="twitterNavLink"><img src="/images/icons/TwitterIconFooter.png" alt=""></a></li>
