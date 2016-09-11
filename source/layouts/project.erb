@@ -29,13 +29,13 @@
   <body class="<%= page_classes %>">
   <div class="container">
   <header>
-  <h1><a href="http://diegozaks.com">Diego Zaks</a></h1>
+  <h1><%= link_to 'Diego Zaks', '/index.html' %></h1>
   <nav>
     <ul>
-      <!-- <li><a href="">The Work</a></li> -->
+      <!-- <li><a href="">Speaking</a></li> -->
       <!-- <li><a href="">Writing</a></li> -->
-      <li><a href="/index.html" class="contactLink">Work</a></li>
-      <li><a href="/contact.html" class="contactLink">Contact</a></li>
+      <li><%= link_to 'Work', '/index.html', :class => "contactLink" %></li>
+      <li><%= link_to 'Contact', '/contact.html', :class => "contactLink" %></li>
       <li><a href="https://twitter.com/diegozaks" target="_blank" class="twitterNavLink"><img src="/images/icons/TwitterIcon.png" alt=""></a></li>
     </ul>
   </nav>
@@ -48,10 +48,9 @@
       <p>Copyright Diego Zaks, 2016. All rights reserved.</p>
     </div>
     <div class="footernav">
-      <ul>
-      <li><a href="/index.html">Work</a></li>
-      <!-- <li><a href="">Writing</a></li> -->
-      <li><a href="/contact.html" class="contactLink">Contact</a></li>
+    <ul>
+      <li><%= link_to 'Work', '/index.html', :class => "contactLink" %></li>
+      <li><%= link_to 'Contact', '/contact.html', :class => "contactLink" %></li>
       <li><a href="https://twitter.com/diegozaks" target="_blank" class="twitterNavLink"><img src="/images/icons/TwitterIconFooter.png" alt=""></a></li>
     </ul>
     </div>
